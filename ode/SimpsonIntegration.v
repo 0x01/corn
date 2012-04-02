@@ -132,10 +132,9 @@ Definition answer (n:positive) (r:CR) : Z :=
  let (a,b) := (approximate r (1#m)%Qpos)*m in
  Zdiv a b.
 
+Print simpson_integral.
 
 Require Import CRsin.
-
-Print simpson_integral.
 
 Time Eval compute in (answer 3 (simpson_integral sin_uc 1 0 1)).
 (*
